@@ -33,7 +33,6 @@ module.exports = function (grunt) {
         script: 'test/fixtures/server.js',
       }
     },
-    mdlint: ['README.md'],
     simplemocha: {
       options: {
         globals: ['should'],
@@ -79,7 +78,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('default', ['nodemon']);
-  grunt.registerTask('test', ['jshint', 'mdlint', 'simplemocha']);
+  grunt.registerTask('test', ['jshint', 'simplemocha']);
 
   grunt.loadTasks('tasks');
 
