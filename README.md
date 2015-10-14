@@ -1,27 +1,28 @@
-# Note: This is not actively maintained, please make an issue if you are interested in helping maintain this project.
-
-# grunt-nodemon
+# grunt-contrib-nodemon
 
 > Run [nodemon](https://github.com/remy/nodemon) as a grunt task for easy configuration and integration with the rest of your workflow
 
-[![NPM version](https://badge.fury.io/js/grunt-nodemon.png)](http://badge.fury.io/js/grunt-nodemon) [![Dependency Status](https://david-dm.org/ChrisWren/grunt-nodemon.png)](https://david-dm.org/ChrisWren/grunt-nodemon) [![Travis Status](https://travis-ci.org/ChrisWren/grunt-nodemon.png)](https://travis-ci.org/ChrisWren/grunt-nodemon)
+[![NPM version](https://badge.fury.io/js/grunt-contrib-nodemon.png)](http://badge.fury.io/js/grunt-contrib-nodemon)
+[![Dependency Status](https://david-dm.org/mgoldsborough/grunt-contrib-nodemon.png)](https://david-dm.org/mgoldsborough/grunt-contrib-nodemon)
+[![Travis Status](https://travis-ci.org/mgoldsborough/grunt-contrib-nodemon.png)](https://travis-ci.org/mgoldsborough/grunt-contrib-nodemon)
 
 ## Getting Started
 If you haven't used grunt before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a gruntfile as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
+
 ```shell
-npm install grunt-nodemon --save-dev
+npm install grunt-contrib-nodemon --save-dev
 ```
 
 Then add this line to your project's `Gruntfile.js` gruntfile:
 
 ```javascript
-grunt.loadNpmTasks('grunt-nodemon');
+grunt.loadNpmTasks('grunt-contrib-nodemon');
 ```
 
 ## Documentation
 
 ### Minimal Usage
-The minimal usage of grunt-nodemon runs with a `script` specified:
+The minimal usage of grunt-contrib-nodemon runs with a `script` specified:
 
 ```js
 nodemon: {
@@ -85,13 +86,13 @@ nodemon: {
       env: {
         PORT: '5455'
       },
-      // omit this property if you aren't serving HTML files and 
+      // omit this property if you aren't serving HTML files and
       // don't want to open a browser tab on start
       callback: function (nodemon) {
         nodemon.on('log', function (event) {
           console.log(event.colour);
         });
-        
+
         // opens browser on initial server start
         nodemon.on('config:update', function () {
           // Delay before server listens on port
@@ -117,7 +118,7 @@ watch: {
     options: {
       livereload: true
     }
-  } 
+  }
 }
 ```
 
