@@ -1,6 +1,6 @@
 {
   "name": "grunt-contrib-nodemon",
-  "version": "0.5.4",
+  "version": "0.6.0",
   "description": "Grunt task to run a nodemon monitor of your node.js server",
   "main": "test/fixtures/server.js",
   "scripts": {
@@ -30,6 +30,6 @@
     "should": "^11.1.0"
   },
   "dependencies": {
-    "nodemon": "^1.10.2"
+    "nodemon": "2.0.2"
   }
 }
